@@ -26,7 +26,8 @@ class Blockchain:
     def get_previous_block(self):
         return self.chain[-1]
 
-    def proof_of_work(self, previous_proof):
+    @staticmethod
+    def proof_of_work(previous_proof):
         new_proof = 1
         check_proof = False
         while not check_proof:
@@ -37,7 +38,8 @@ class Blockchain:
                 new_proof += 1
         return new_proof
 
-    def hash(self, block):
+    @staticmethod
+    def hash(block):
         encoded_block = json.dumps(block, sort_keys=True).encode()
         return hashlib.sha256(encoded_block).hexdigest()
 
@@ -86,4 +88,4 @@ def mine_block():
 
 
 # Running the app
-app.run(host='0.0.0.0', port=5000)
+app.run(host='0.0.0.0', port=6000)
