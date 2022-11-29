@@ -88,7 +88,7 @@ def mine_block():
 
 
 # Getting the full Blockchain
-@app.route('/get_chain', methods = ['GET'])
+@app.route('/get_chain', methods=['GET'])
 def get_chain():
     response = {
         'chain': blockchain.chain,
@@ -104,7 +104,7 @@ def is_valid():
         message = "Chain is valid."
     else:
         message = "Chain is invalid!"
-    response = { 'message': message }
+    response = {'message': message}
     return jsonify(response), 200
 
 
