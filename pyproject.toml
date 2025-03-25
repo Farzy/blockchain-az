@@ -1,16 +1,16 @@
-[tool.poetry]
+[project]
 name = "blockchain-az"
 version = "0.1.0"
 description = ""
-authors = ["Farzad FARID <farzy@farzy.org>"]
 readme = "README.md"
-packages = [{include = "blockchain_az"}]
+authors = [
+    {name = "Farzad FARID", email = "farzy@farzy.org"},
+]
+requires-python = ">=3.10, <4.0"
+dependencies = [
+    "flask >=2.2.2, <3.0.0",
+    "datetime >=5.1, <6.0",
+]
 
-[tool.poetry.dependencies]
-python = "^3.10"
-flask = "^2.2.2"
-
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.uv]
+default-groups = []
