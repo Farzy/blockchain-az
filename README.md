@@ -5,7 +5,7 @@ A tutorial from Udemy: https://www.udemy.com/course/build-your-blockchain-az/
 ## Setup
 
 ```shell
-poetry install
+uv sync
 ```
 
 ## References
